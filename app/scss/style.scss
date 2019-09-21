@@ -1,15 +1,152 @@
-html{
-    box-sizing: border-box;
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
 }
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
+.slider__inner{
+    background-image: url(../images/fon.png);
+    background-position:  top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 690px;
+    margin-top: 0;
+    width: 100%;
+
 }
-.box{
-    font-style: 12px;
-    margin: 0;
-    padding: 0;
-    padding-top: 13px;
-    text-align: left;
+.header__logo{
+    a{
+        font-size: 30px;
+        font-weight: 500;
+        margin-top: 40px;
+    }
 }
+ul{
+    margin-top: 40px;
+    li{
+        display: inline-block;
+        margin-left: 35px;
+        font-size: 11px;
+        color: $white;
+        font-weight: 500;
+    }
+    li:hover{
+        color: #ffe26d;
+    }
+}
+.header__box{
+    margin-top: 126px;
+    margin-left: 0;
+    color: #fff;
+    .header__title{
+        font-size: 41px;
+        font-weight: 700;
+        max-width: 399px;
+    }
+    .header__subtitle{
+        font-size: 19px;
+        max-width: 459px;
+        margin-top: 35px;
+    }
+}
+.header__button{
+    margin-top: 35px;
+    padding: 18px 37px 18px 31px;
+    border: 1px solid #ffe26d;
+    border-radius: 4px;
+    max-width: 135px;
+    background-color: #ffe26d;
+    text-transform: uppercase;
+    transition: all .3s;
+    cursor: pointer;
+    a{
+        font-size: 10px;
+        color: #000000;
+        font-weight: 500;
+    }
+}
+.header__button:hover{
+    background-color: #62497c;
+    border: 1px solid #62497c;
+    a{
+        color: #fff;
+    }
+}
+
+//start welcome
+.welcome{
+&__title{
+    font-size: 44px;
+    font-weight: 700;
+    margin-top: 87px;
+    text-align: center;
+    } 
+    &__text{
+        font-size: 30px;
+        max-width: 447px;
+        margin-top: 80px;
+    }
+    &__box{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__images{
+        margin-top: 55px;
+    }
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 75px;
+    }
+}
+.welcome__item{
+    max-width: 154px;
+    text-align: center;
+    &-title{
+    color: #62497c;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    }
+    &-text{
+        font-size: 13px;
+        color: #cacaca;
+        font-weight: 500;
+        margin-top: 31px;
+    }
+    &-images{
+        border-radius: 50%;
+        background-color: #8725f0;
+        width: 79px;
+        height: 79px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 38px 31px;
+    }
+    &-button{
+        max-width: 123px;
+        max-height: 42px;
+        background-color: #8725f0;
+        padding: 8px 27px;
+        margin-top: 35px;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+        a{
+            font-size: 10px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+        &:hover{
+            background-color: #ffe26d;
+            color: #000000;
+         }
+    }
+}
+
+//end welcome

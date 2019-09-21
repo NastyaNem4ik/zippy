@@ -38,7 +38,7 @@ return gulp.src([
 ])
 .pipe(concat('libs.min.js'))
 .pipe(uglify())
-.pipe(gulp.dest('./app/js'))
+.pipe(gulp.dest('./app/jsmin'))
 });
 
 gulp.task('html',function(){
@@ -47,7 +47,9 @@ gulp.task('html',function(){
 });
 
 gulp.task('js',function(){
-    return gulp.src('./app/js/*.js')
+    return gulp.src('./app/js/**/*.js')
+    .pipe(rename({suffix:'.min'}))
+    .pipe(gulp.dest('./app/jsmin'))
     .pipe(browserSync.reload({stream:true}))
 });
 
